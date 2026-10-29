@@ -4,7 +4,7 @@ Modul KernelSU untuk memilih dan mengunduh berbagai daftar hosts adblock langsun
 
 ## Fitur
 - **Menu pemilihan** - Pilih daftar hosts langsung dari tombol Action
-- **Banyak pilihan** - Tersedia dari StevenBlack, AdAway, OISD, dan 1Hosts
+- **Banyak pilihan** - Tersedia dari StevenBlack, AdAway, OISD, 1Hosts, HaGeZi, dan GoodbyeAds
 - **Backup otomatis** - Hosts lama otomatis di-backup ke `hosts.bak`
 - **Auto-konversi** - Mendukung format `127.0.0.1` dan `dnsmasq` (`address=/domain/`)
 - **Validasi ketat** - Hanya menerapkan jika file valid
@@ -35,23 +35,33 @@ Modul KernelSU untuk memilih dan mengunduh berbagai daftar hosts adblock langsun
 | 14 | 1Hosts Lite | Ringan & minim false positive |
 | 15 | 1Hosts Pro | Agresif, lebih lengkap |
 
+### HaGeZi / GoodbyeAds
+| No | Nama | Keterangan |
+|---|---|---|
+| 16 | HaGeZi Light | Paling ringan & aman, minim false positive |
+| 17 | HaGeZi Normal | Seimbang antara blocking & kompatibilitas |
+| 18 | HaGezi Pro | Agresif, cakupan luas untuk ad/tracker |
+| 19 | HaGeZi Ultimate | Paling agresif, cakupan sangat luas |
+| 20 | GoodbyeAds | Ringan & simpel, cocok buat daily use |
+
 ## Cara Install
 1. Download `adfree-hosts.zip` dari [Releases](https://github.com/vhio/adfree/releases/latest)
-2. Install melalui **KernelSU Manager > Modules > Install from storage**
+2. Install via **KernelSU Manager > Modules > Install from storage**
 3. Buka modul **AdFree Hosts** di KernelSU Manager
 4. Tekan tombol **Action**
-5. Pilih nomor list yang kamu inginkan (contoh: `12` untuk OISD Small)
+5. Pilih nomor list yang kamu inginkan (contoh: `16` untuk HaGeZi Light)
 6. Tunggu proses download & penerapan selesai
 7. **Reboot** perangkat
 
 ## Rekomendasi
-- **Daily Use:** `OISD Small (12)` - Seimbang antara blocking & kompatibilitas
+- **Daily Use:** `HaGeZi Light (16)` atau `OISD Small (12)` - Sangat stabil
 - **Super Ringan:** `AdAway Official (11)` atau `Unified (1)`
-- **Maksimal Blocking:** `OISD Big (13)` atau `1Hosts Pro (15)` - Bisa menyebabkan false positive pada beberapa situs/layanan
+- **Agresif:** `HaGeZi Pro (18)` atau `1Hosts Pro (15)` - Bisa menyebabkan false positive pada beberapa situs/layanan
+- **Maksimal Blocking:** `HaGeZi Ultimate (19)` - Lebih agresif, cocok kalo pengen nutup banyak hal
 
 ## Catatan
-- Jika kamu mengganti dari modul `stevenblack-hosts` sebelumnya, lebih aman untuk **uninstall modul lama** terlebih dahulu karena ID modul berbeda (`adfree-hosts`)
-- Backup hosts lama otomatis disimpan di `system/etc/hosts.bak` di dalam folder modul
+- If you want to replace from the previous `stevenblack-hosts` module, uninstall the old module first since the module ID changed to `adfree-hosts`
+- Backup otomatis tersimpan di `system/etc/hosts.bak` di dalam folder modul
 - Butuh koneksi internet saat menjalankan Action
 
 ## Credits
@@ -59,3 +69,5 @@ Modul KernelSU untuk memilih dan mengunduh berbagai daftar hosts adblock langsun
 - [AdAway](https://github.com/AdAway/AdAway)
 - [OISD](https://oisd.nl/)
 - [1Hosts](https://github.com/badmojr/1Hosts)
+- [HaGeZi/dns-blocklists](https://github.com/hagezi/dns-blocklists)
+- [GoodbyeAds](https://github.com/GoodbyeAds/GoodbyeAds)
