@@ -67,7 +67,6 @@ Modul KernelSU untuk memilih dan mengunduh berbagai daftar hosts adblock langsun
 - **Maksimal Blocking:** `HaGeZi Ultimate (19)`
 
 ## Catatan
-- Jika mengganti dari modul `stevenblack-hosts` sebelumnya, uninstall modul lama terlebih dahulu karena ID modul berbeda
 - Backup otomatis tersimpan at `system/etc/hosts.bak`
 - Butuh koneksi internet saat menjalankan Action
 
