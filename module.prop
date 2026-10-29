@@ -1,8 +1,8 @@
 id=adfree-hosts
 name=AdFree Hosts
-version=v1.4
-versionCode=5
+version=v1.5
+versionCode=6
 author=StevenBlack + adlists
-description=Pilih & update hosts dari StevenBlack, AdAway, OISD, 1Hosts, HaGeZi, GoodbyeAds lewat Action di KernelSU
+description=Pilih & update hosts dari StevenBlack, AdAway, OISD, 1Hosts, HaGeZi, GoodbyeAds, AWAvenue, AdRules lewat Action di KernelSU
 support=https://github.com/StevenBlack/hosts
 updateJson=

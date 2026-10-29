@@ -33,10 +33,15 @@ echo "[ HAGEZI / GOODBYEADS ]"
 echo "16) HaGeZi Light (Paling ringan & aman)"
 echo "17) HaGeZi Normal (Seimbang)"
 echo "18) HaGeZi Pro (Agresif)"
-echo "19) HaGeZi Ultimate (Paling agresif)"
+echo "19) HaGeZi Ultimate (Paling agressif)"
 echo "20) GoodbyeAds (Ringan & simpel)"
 echo ""
-echo -n "Masukkan pilihan [1-20] (default: 1): "
+echo "[ AWAvenue / AdRules ]"
+echo "21) AWAvenue Ads Rule (Ringan & modern)"
+echo "22) AdRules (DNS) - Cats-Team (Seimbang)"
+echo "23) AdRules (Strict) - Cats-Team (Agresif)"
+echo ""
+echo -n "Masukkan pilihan [1-23] (default: 1): "
 read -r choice 2>/dev/null
 [ -z "$choice" ] && choice=1
 
@@ -61,6 +66,9 @@ case "$choice" in
   18) URL="https://raw.githubusercontent.com/hagezi/dns-blocklists/main/hosts/pro.txt" ;;
   19) URL="https://raw.githubusercontent.com/hagezi/dns-blocklists/main/hosts/ultimate.txt" ;;
   20) URL="https://raw.githubusercontent.com/GoodbyeAds/GoodbyeAds/master/Hosts/GoodbyeAds.txt" ;;
+  21) URL="https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule-Hosts.txt" ;;
+  22) URL="https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt" ;;
+  23) URL="https://raw.githubusercontent.com/Cats-Team/AdRules/main/strict-dns.txt" ;;
   *) echo "! Pilihan tidak valid. Menggunakan Unified."; URL="$BASE_SB/hosts" ;;
 esac
 
