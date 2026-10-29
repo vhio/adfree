@@ -1,0 +1,28 @@
+#!/sbin/sh
+umask 022
+
+OUTFD=$2
+ZIPFILE=$3
+
+mount /data 2>/dev/null
+
+if [ -f /data/adb/magisk/util_functions.sh ]; then
+  . /data/adb/magisk/util_functions.sh
+  install_module
+  exit 0
+fi
+
+ui_print() { echo "$1"; }
+
+MODPATH=/data/adb/modules_update/adfree-hosts
+rm -rf "$MODPATH" 2>/dev/null
+mkdir -p "$MODPATH"
+
+ui_print "- Extracting module files"
+unzip -o "$ZIPFILE" -d "$MODPATH" >/dev/null
+[ -f "$MODPATH/module.prop" ] || { ui_print "! module.prop not found"; exit 1; }
+[ -f "$MODPATH/action.sh" ] && chmod 755 "$MODPATH/action.sh"
+
+ui_print "- AdFree Hosts installed"
+ui_print "- Gunakan tombol Action di KernelSU untuk memilih & update daftar hosts"
+exit 0

@@ -1,0 +1,8 @@
+id=stevenblack-hosts
+name=StevenBlack Hosts
+version=v1.0
+versionCode=1
+author=StevenBlack
+description=Update hosts file from StevenBlack/hosts list via action
+support=https://github.com/StevenBlack/hosts
+updateJson=
